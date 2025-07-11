@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.LetControl" parent="Base.Theme.LetControl">
+        <!-- Transparent system bars for edge-to-edge. -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    </style>
+
+
+
+    <style name="BottomNavTextActive" parent="TextAppearance.AppCompat.Caption">
+
+        <item name="android:textColor">#15A3EF</item>
+    </style>
+    <style name="BottomNavTextInactive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">#BFC0C2</item>
+    </style>
+</resources>

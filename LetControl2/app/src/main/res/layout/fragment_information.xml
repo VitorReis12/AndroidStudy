@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:id="@+id/frame_conteudo_estatisticas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGastosRT">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="0dp"
+            android:layout_height="207dp"
+            android:src="@drawable/back_relatorio_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="57dp"
+            android:text="Relatório"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="de Consumo"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageButton
+            android:id="@+id/ButtonConsumoRT"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_relatorio"
+            android:src="@drawable/water_relatorio"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonGastosRT"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+        <ImageButton
+            android:id="@+id/ButtonGastosRT"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_relatorio_gray"
+            android:src="@drawable/gastos_but_relatorio"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonMetasRT"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ButtonConsumoRT"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+        <ImageButton
+            android:id="@+id/ButtonMetasRT"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_relatorio_gray"
+            android:src="@drawable/metas_but_relatorio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ButtonGastosRT"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+        <TextView
+            android:id="@+id/textViewConsumoRT"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Consumo de água"
+            android:textColor="@color/startBlue_progressbar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewGastosRT"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonConsumoRT" />
+
+        <TextView
+            android:id="@+id/textViewGastosRT"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Gasto de água (R$)"
+            android:textColor="#757474"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewMetasRT"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewConsumoRT"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonGastosRT" />
+
+        <TextView
+            android:id="@+id/textViewMetasRT"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:text="Metas de Consumo"
+            android:textColor="#757474"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewGastosRT"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonMetasRT" />
+
+        <ImageView
+            android:id="@+id/imageView38"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="29dp"
+            android:src="@drawable/relatorio_back_user"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="47dp"
+            android:src="@drawable/baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
