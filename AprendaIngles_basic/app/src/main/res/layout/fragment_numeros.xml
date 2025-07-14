@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/segundo_fundo"
+    tools:context=".NumerosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <ImageButton
+        android:id="@+id/imageButtonUm"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/um"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonTres"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDois"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dois"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonQuatro"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTres"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tres"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonCinco"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonUm" />
+
+    <ImageButton
+        android:id="@+id/imageButtonQuatro"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/quatro"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDois" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCinco"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cinco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTres" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/segundo_fundo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonQuatro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
