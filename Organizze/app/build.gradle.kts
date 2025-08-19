@@ -16,6 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -45,6 +46,8 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.recyclerview)
+    implementation(libs.cardview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -53,4 +56,6 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.heinrichreimersoftware:material-intro:2.0.0")
     implementation("com.github.clans:fab:1.6.4")
+    implementation("com.github.prolificinteractive:material-calendarview:1.4.3")
+
 }

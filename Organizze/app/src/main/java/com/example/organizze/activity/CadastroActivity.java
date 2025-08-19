@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.organizze.R;
 import com.example.organizze.config.ConfiguracaoFirebase;
+import com.example.organizze.helper.Base64Custom;
 import com.example.organizze.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,9 +57,9 @@ public class CadastroActivity extends AppCompatActivity {
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String textoNome = editTextNome.toString();
-                String textoEmail = editTextEmail.toString();
-                String textoSenha = editTextSenha.toString();
+                String textoNome = editTextNome.getText().toString();
+                String textoEmail = editTextEmail.getText().toString();
+                String textoSenha = editTextSenha.getText().toString();
 
                 if (!textoNome.isEmpty()) {
                     if (!textoEmail.isEmpty()) {
@@ -87,7 +88,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     public void cadastrarUsuario() {
 
-        autenticacao = ConfiguracaoFirebase.autenticacao;
+
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         autenticacao.createUserWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -95,6 +96,9 @@ public class CadastroActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
+                    String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+                    usuario.setIdUsuario(idUsuario);
+                    usuario.salvar();
                     finish();
 
                 } else {

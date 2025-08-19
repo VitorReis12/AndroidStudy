@@ -4,11 +4,32 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
 
+    <style name="despesaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorPrimary">@color/colorPrimaryDespesa</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkDespesa</item>
+        <item name="android:colorAccent">@color/colorAccentDespesa</item>
+    </style>
+
+    <style name="receitaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryReceita</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkReceita</item>
+        <item name="colorAccent">@color/colorAccentReceita</item>
+    </style>
+
     <style name="Theme.Organizze" parent="Base.Theme.Organizze" />
+
+
 </resources>

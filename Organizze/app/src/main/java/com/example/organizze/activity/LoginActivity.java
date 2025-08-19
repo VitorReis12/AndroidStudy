@@ -51,8 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         buttonEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = campoEmail.toString();
-                String senha = campoSenha.toString();
+                String email = campoEmail.getText().toString();
+                String senha = campoSenha.getText().toString();
 
                 if (!email.isEmpty()) {
                     if (!senha.isEmpty()) {
@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void validarLogin() {
-        autenticacao = ConfiguracaoFirebase.autenticacao;
+
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         autenticacao.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
