@@ -51,6 +51,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     implementation("com.ogaclejapan.smarttablayout:library:2.0.0@aar")
     implementation("com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
 
 }
