@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+        auth = ConfiguracaoFirebase.getAuth();
 
         inputEmail = findViewById(R.id.inputEmailLogin);
         inputSenha = findViewById(R.id.inputSenhaLogin);

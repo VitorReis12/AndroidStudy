@@ -12,10 +12,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.whatsapp.R;
 import com.example.whatsapp.config.ConfiguracaoFirebase;
+import com.example.whatsapp.fragment.ContatosFragment;
+import com.example.whatsapp.fragment.ConversasFragment;
 import com.google.firebase.auth.FirebaseAuth;
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(),
+                FragmentPagerItems.with(this)
+                        .add("Conversas", ConversasFragment.class)
+                        .add("Contatos", ContatosFragment.class)
+                        .create()
+        );
+
+
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager.setAdapter(adapter);
+        SmartTabLayout viewTabLayout = findViewById(R.id.viewPagerTab);
+        viewTabLayout.setViewPager(viewPager);
     }
 
 
