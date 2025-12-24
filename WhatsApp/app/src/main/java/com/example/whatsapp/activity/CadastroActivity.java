@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.whatsapp.R;
 import com.example.whatsapp.config.ConfiguracaoFirebase;
+import com.example.whatsapp.helper.Base64Custom;
 import com.example.whatsapp.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -62,6 +63,19 @@ public class CadastroActivity extends AppCompatActivity {
 
                     Toast.makeText(CadastroActivity.this, "Sucesso ao Cadastrar Usuário!", Toast.LENGTH_SHORT).show();
                     finish();
+
+
+                    try {
+
+                        String idUser = Base64Custom.codificarBase64(usuario.getEmail());
+                        usuario.setId(idUser);
+
+
+                        usuario.salvar();
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
                 }else{
                     String exception = "";
